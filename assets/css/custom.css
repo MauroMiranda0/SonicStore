@@ -1,0 +1,36 @@
+:root {
+    --color-principal-1: #FF524D;
+    --color-principal-2: #f2e2e2;
+    --color-intermedio-1: #D6336C;
+    --color-intermedio-2: #F4C7C7;
+    --color-complementario-1: #34495E;
+    --color-complementario-2: #A2D9CE;
+    --color-neutro: #ECF0F1;
+  }
+
+.navbar-nav .nav-item .nav-link.active{
+    color: var(--color-principal-1)!important; /* Cambia este color por el que prefieras */
+}
+
+ul>li>a:hover{
+    color: var(--color-principal-1)!important;
+}
+
+.about{
+    background-color: var(--color-principal-2)!important;
+}
+
+.color{
+    h1, h3, span{
+        color: var(--color-principal-1)!important;
+    }
+}
+
+.border{
+    border-color: var(--color-principal-1)!important;
+}
+
+.alert {
+    margin-top: 10px;
+    display: none; /* Inicialmente oculto */
+}
