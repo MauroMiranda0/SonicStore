@@ -1,0 +1,101 @@
+<!-- Información del Comprador -->
+                                <h4>Información del Comprador</h4>
+                                <div class="col-md-12 mb-3">
+                                    <label for="buyerName" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="row">                                    
+                                    <div class="col-md-6 mb-3">
+                                        <label for="buyerEmail" class="form-label">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="buyerPhone" class="form-label">Número de Teléfono</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                </div>
+
+<!-- Información de Envío -->
+                                <h4>Información de Envío</h4>
+                                <div class="mb-3">
+                                    <label for="shippingAddress" class="form-label">Dirección</label>
+                                    <input type="text" class="form-control" id="shippingAddress" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="shippingCity" class="form-label">Ciudad</label>
+                                        <input type="text" class="form-control" id="shippingCity" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="shippingState" class="form-label">Estado/Provincia</label>
+                                        <input type="text" class="form-control" id="shippingState" required>
+                                    </div>
+                                </div>
+                               <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="shippingZip" class="form-label">Código Postal</label>
+                                    <input type="text" class="form-control" id="shippingZip" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="shippingCountry" class="form-label">País</label>
+                                    <input type="text" class="form-control" id="shippingCountry" required>
+                                </div>
+                               </div>
+                                <div class="mb-3">
+                                    <label for="notes" class="form-label">Instrucciones Especiales</label>
+                                    <textarea class="form-control" id="notes" rows="3"></textarea>
+                                </div>
+
+                                <!-- Detalles del Pedido -->
+                                <h4>Detalles del Pedido</h4>
+                                <div class="mb-3 col-md-4">
+                                    <label for="paymentMethod" class="form-label">Método de Pago</label>
+                                    <select class="form-select" id="paymentMethod" required>
+                                        <option value="credit_card">Aplazo</option>
+                                        <option value="bank_transfer">Transferencia Bancaria</option>
+                                        <option value="paypal">PayPal</option>
+                                    </select>
+                                </div>
+
+                                <!-- Productos -->
+                                <h4>Productos</h4>
+                                <div id="productsContainer">
+                                    <!-- Aquí se pueden agregar múltiples productos -->
+                                    <div class="product mb-3">
+                                        <!-- <label class="form-label">Producto</label> -->
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="id Producto" required>
+                                            <input type="number" class="form-control" placeholder="Cantidad" min="1" required>
+                                            <select type="number" class="form-select" placeholder="Talla">
+                                                <option value="talla1">Talla 1</option>
+                                                <option value="talla2">Talla 2</option>
+                                                <option value="talla3">Talla 3</option>
+                                            </select>
+                                            <select type="text" class="form-select" placeholder="Color">
+                                                <option value="color1">Color 1</option>
+                                                <option value="color2">Color 2</option>
+                                                <option value="color3">Color 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-success mb-3" onclick="addProduct()">Agregar Producto</button>
+
+                                <!-- Información Adicional -->
+                                <h4>Información Adicional</h4>
+                                <div class="mb-3">
+                                    <label for="shippingMethod" class="form-label">Método de Envío Preferido</label>
+                                    <select class="form-select" id="shippingMethod">
+                                        <option value="standard">Estándar</option>
+                                        <option value="express">Exprés</option>
+                                    </select>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" class="form-check-input" id="terms">
+                                    <label class="form-check-label" for="terms">Acepto los términos y
+                                        condiciones</label>
+                                </div>
+
+<!-- Confirmación -->
+                                <button type="submit" class="btn btn-success">Enviar Orden de Compra</button>
+                                <button type="reset" class="btn btn-secondary">Cancelar</button>

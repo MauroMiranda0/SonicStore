@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Sonic Store - Contacto</title>
+    <title>Sonic Store - Formulario de pedido</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -55,7 +55,7 @@
                             <a class="nav-link" href="shop.html">Tienda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="contact.html">Contacto</a>
+                            <a class="nav-link" href="contact.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -97,94 +97,53 @@
         </div>
     </div>
 
-    <!-- Start Content Page -->
-    <div class="container-fluid bg-light py-5">
-        <div class="color col-md-6 m-auto text-center">
-            <h1 class="h1">Contáctanos</h1>
-            <p>
-                En Sonic Store, valoramos tu opinión y estamos aquí para ayudarte. Si tienes alguna pregunta, necesitas
-                asistencia o deseas brindarnos tu retroalimentación, no dudes en contactarnos. Estamos para resolver
-                cualquier duda que puedas tener.
-            </p>
-        </div>
-        <!-- Start Contact -->
-        <div class="container w-75 py-3">
-            <div class="row py-5">
-                <form action="https://formsubmit.co/e940058130a37584c42a892354a23f5b" method="POST" id="miFormulario"
-                    class="col-md-9 m-auto" role="form">
-                    <div class="row">
-                        <div class="form-group col-md-6 mb-3">
-                            <label for="inputname">Nombre</label>
-                            <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre">
-                        </div>
-                        <div class="form-group col-md-6 mb-3">
-                            <label for="inputemail">Email</label>
-                            <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputsubject">Asunto</label>
-                        <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Asunto">
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputmessage">Mensaje</label>
-                        <textarea class="form-control mt-1" id="message" name="message" placeholder="Mensaje"
-                            rows="8"></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col text-end mt-2">
-                            <!-- <button type="submit" class="btn btn-success btn-lg px-3">Enviar</button> -->
-                            <button type="button" class="btn btn-success btn-lg px-3" data-bs-toggle="modal"
-                                data-bs-target="#confirmModal">
-                                Enviar
-                            </button>
-                        </div>
-                        <!-- Mensaje de Confirmación -->
-                        <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="confirmModalLabel">Confirmación</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+    <!-- Open Content -->
+    <section class="bg-light">
+        <div class="container pb-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-10 mt-5">
+                    <div class="card align-items-center">
+                        <div class="card-body col-lg-0 color p-5">
+                            <h2 class="h2 text-center">Formulario de pedido</h2>
+
+                            <form id="whatsappForm" class="p-5">
+
+                                <!-- <label for="name">Nombre:</label>
+                                <input type="text" id="name" name="name" required>
+                                <br> -->
+                                <!-- <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                                <br> -->
+                                <!-- <button type="submit">Enviar a WhatsApp</button> -->
+
+                                <!-- Información del Comprador -->
+                                <h4>Información del Comprador</h4>
+                                <div class="col-md-12 mb-3">
+                                    <label for="name" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
-                                    <div class="modal-body">
-                                        Recibimos tu mensaje, nos comunicaremos contigo.
-                                    </div>
-                                    <div class="modal-footer"><!-- 
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                                        <button type="submit" class="btn btn-success">Entendido</button>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Número de Teléfono</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required>
                                     </div>
                                 </div>
-                            </div>
+                                <!-- Confirmación -->
+                                <button type="submit" class="btn btn-success">Enviar Orden de Compra</button>
+                                <button type="reset" class="btn btn-secondary">Cancelar</button>
+                            </form>
+
                         </div>
                     </div>
-
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                </form>
+                </div>
             </div>
         </div>
-        <!-- End Contact -->
-    </div>
-
-    <!-- Start Map -->
-    <div class="py-5">
-        <div class="border container card w-50 p-3">
-            <div class="color card-body">
-                <h3 class="card-title text-center fw-light">Ubicación</h3>
-            </div>
-            <div class="ratio ratio-1x1">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3746.778188140717!2d-98.70792852798306!3d20.10155706669479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1a77710bfec05%3A0x13e284b615ac0fe4!2sCipr%C3%A9s%20228%2C%20Villas%20del%20%C3%81lamo%2C%2042184%20Campestre%20Villas%20del%20%C3%81lamo%2C%20Hgo.!5e0!3m2!1ses-419!2smx!4v1720854436768!5m2!1ses-419!2smx"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-    <!-- End Map -->
+    </section>
+    <!-- Close Content -->
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
@@ -258,7 +217,7 @@
                     <h5 class="p-1">Suscribete para recibir nuestros catálogos</h5>
                     <label class="sr-only" for="subscribeEmail">Dirección de Correo Electrónico</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-color-success" id="subscribeEmail"
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
                             placeholder="Correo electrónico">
                         <div class="input-group-text btn-success text-light">Suscribirse</div>
                     </div>
@@ -288,6 +247,42 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+
+    <!-- Start Slider Script -->
+    <script src="assets/js/slick.min.js"></script>
+    <script>
+        $('#carousel-related-product').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3
+                }
+            }
+            ]
+        });
+    </script>
+    <!-- End Slider Script -->
+
 </body>
 
 </html>
